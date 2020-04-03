@@ -28,11 +28,8 @@ API: [PyTumblr](https://pypi.org/project/PyTumblr/)<br>
 ![不一致标签图像](https://github.com/HouXun/Image-Emotional-Analysis/raw/master/pics/noise1.png)<br>
 
 * 特定算法移除特征不明显图像。特征不明显图像的特点是图像颜色过于单一、在纯色背景下附有大量的文字。如图所示，虽然从图片中的文字能看出用户发帖时的情感是积极、乐观的，但从图像本身分析，该图像并不具备表达积极情感的特征。<br>
-
 ![特征不明显图像](https://github.com/HouXun/Image-Emotional-Analysis/raw/master/pics/noise2.jpg)<br>
-
 ![特征不明显图像筛选算法](https://github.com/HouXun/Image-Emotional-Analysis/raw/master/pics/algorithm1.png)<br>
-
 ## 图像特征提取
 ### 传统图像特征
 * HSV颜色直方图。HSV颜色空间由色调、饱和度和亮度组成。色调H表示颜色种类，饱和度表示颜色深浅，亮度V表示颜色明暗程度。HSV颜色空间是最符合人眼视觉特性的颜色模型，在图像分类、检索中，应用这种颜色模型会更适合用户的视觉判断。<br>
