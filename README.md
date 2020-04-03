@@ -17,17 +17,20 @@ Image-Emotional-Analysis
 (4) 完成对本系统的需求分析、系统设计、系统实现、系统测试等工作。本课题采用Django实现可视化界面，用户可在本系统进行注册、登录、登出、上传图片、预测图像情感、管理用户等操作。<br>
 
 ## 系统框架
-![系统框架如图所示](https://github.com/HouXun/Image-Emotional-Analysis/pics/structure.png)
+![系统框架如图所示](https://github.com/HouXun/Image-Emotional-Analysis/raw/master/pics/structure.png)
 
 ## 数据获取
 社交平台：[Tumblr](https://tumblr.zendesk.com/hc/zh-cn)<br>
 API: [PyTumblr](https://pypi.org/project/PyTumblr/)<br>
 
 ## 图像预处理
-人工排除无关图像和不一致标签图像。无关图像包括广告、无效图像等。不一致标签图像反映出用户发表的图像和文本所表达的情感存在不一致现象，通常情况下文本所表达的情感是用户的实时发帖情感，而图像往往不能准确的表达出该情感。如图所示，上图展现了一位正在哭泣的女人，然而文本部分表明这位女人见到了奥巴马喜极而泣；下图描述的是一位微笑的男孩，但根据文本，事实上是这位小男孩不幸去世。对于这种不一致标签的图像，也需要进行人工检查筛选。<br>
-
+人工排除无关图像和不一致标签图像。无关图像包括广告、无效图像等。不一致标签图像反映出用户发表的图像和文本所表达的情感存在不一致现象，通常情况下文本所表达的情感是用户的实时发帖情感，而图像往往不能准确的表达出该情感。如图所示，该图展现了一位正在哭泣的女人，然而文本部分表明这位女人见到了奥巴马喜极而泣；下图描述的是一位微笑的男孩，但根据文本，事实上是这位小男孩不幸去世。对于这种不一致标签的图像，也需要进行人工检查筛选。<br>
+![不一致标签图像](https://github.com/HouXun/Image-Emotional-Analysis/raw/master/pics/noise1.png)
 特定算法移除特征不明显图像。特征不明显图像的特点是图像颜色过于单一、在纯色背景下附有大量的文字。如图所示，虽然从图片中的文字能看出用户发帖时的情感是积极、乐观的，但从图像本身分析，该图像并不具备表达积极情感的特征。<br>
-特征不明显图像筛选算法
+
+![特征不明显图像](https://github.com/HouXun/Image-Emotional-Analysis/raw/master/pics/noise2.png)<br>
+
+![特征不明显图像筛选算法](https://github.com/HouXun/Image-Emotional-Analysis/raw/master/pics/algorithm1.png)<br>
 
 ## 图像特征提取
 ### 传统图像特征
