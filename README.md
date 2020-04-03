@@ -17,7 +17,7 @@ Image-Emotional-Analysis
 (4) 完成对本系统的需求分析、系统设计、系统实现、系统测试等工作。本课题采用Django实现可视化界面，用户可在本系统进行注册、登录、登出、上传图片、预测图像情感、管理用户等操作。<br>
 
 ## 系统框架
-系统框架如图所示
+![系统框架如图所示](https://github.com/HouXun/Image-Emotional-Analysis/pics/structure.png)
 
 ## 数据获取
 社交平台：[Tumblr](https://tumblr.zendesk.com/hc/zh-cn)<br>
