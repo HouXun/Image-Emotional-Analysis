@@ -31,7 +31,6 @@ API: [PyTumblr](https://pypi.org/project/PyTumblr/)<br>
 
 ![特征不明显图像](https://github.com/HouXun/Image-Emotional-Analysis/raw/master/pics/noise2.jpg)<br>
 
-特征不明显图像筛选算法<br>
 ![特征不明显图像筛选算法](https://github.com/HouXun/Image-Emotional-Analysis/raw/master/pics/algorithm1.png)<br>
 
 ## 图像特征提取
