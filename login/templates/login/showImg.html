@@ -1,0 +1,19 @@
+{% extends 'login/base.html' %}
+{% load staticfiles %}
+{% block title %}预测{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+    <title>预测结果</title>
+    {% for img in imgs %}
+        <div style="margin: 0 10px 10px 0;  float: left" >
+            <img src='{{ img.img.url }}'  width="700" height="500" />
+            <h1>
+                 情感标签：{{ img.label }}
+            </h1>
+        </div>
+
+    {% endfor %}
+{% endblock %}

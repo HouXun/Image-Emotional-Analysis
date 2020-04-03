@@ -1,0 +1,38 @@
+{% extends 'login/base.html' %}
+{% load staticfiles %}
+{% block title %}主页{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% if request.session.is_login %}
+    <h1>你好,{{ request.session.user_name }}！欢迎回来！</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="img" class="btn btn-default" multiple>
+            <br>
+            <button type="submit" class="btn btn-default">上传</button>
+        </form>
+        <br>
+
+        <form method="get" action="http://127.0.0.1:8000/show">
+            <button type="submit" class="btn btn-default">预测并查看结果</button>
+        </form>
+        <br>
+        <form method="get" action="http://127.0.0.1:8000/admin">
+            <button type="submit" class="btn btn-default">管理用户</button>
+        </form>
+
+    {% else %}
+    <h1>你尚未登录，只能访问公开内容！</h1>
+        <form method="get" action="http://127.0.0.1:8000/admin">
+            <button type="submit" class="btn btn-default">管理用户</button>
+        </form>
+        <br>
+        <form method="get" action="http://127.0.0.1:8000/login">
+            <button type="submit" class="btn btn-default>登陆</button>
+        </form>
+
+    {% endif %}
+{% endblock %}
